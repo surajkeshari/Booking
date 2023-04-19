@@ -71,9 +71,11 @@
 .date{
     position: absolute;
     top: 50px;
+    z-index: 2px;
 }
 
 .options{
+    z-index: 2px;
     z-index: 2;
     position: absolute;
     top: 50px;
@@ -112,3 +114,4 @@
     cursor: not-allowed;
 }
 
+ 

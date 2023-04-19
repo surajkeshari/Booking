@@ -13,7 +13,7 @@ import {format} from "date-fns"
 
 // import { faBed } from "@fortawesome/free-solid-svg-icons"
 import { faTaxi } from "@fortawesome/free-solid-svg-icons"
-const Header = () => {
+const Header = (type) => {
   const[openDate,setOpenDate]=useState(false);// state change krr rhe hai or isko use kr rhe jisse hme calendaer website ko open krte hi na dikhe
   //below is an array 
   const [date, setDate] = useState([
@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <div className="header">
-    <div className="headerContainer">
+    <div className={type==="list" ? "headerContainer listMode" : "headerContainer"}>
       <div className="headerList">
         <div className="headerListItem active">
         <FontAwesomeIcon icon={faBed} />
@@ -69,6 +69,8 @@ const Header = () => {
         </div>
 
       </div>
+      { type !== "list" &&
+        <>
       <h1 className="headerTitle">A lifetime of discount ? it's genius.</h1>
     <p className="headerDesc">
       get rewad for your unlock instant saving of 1% or more
@@ -126,10 +128,10 @@ const Header = () => {
       <div className="headerSearchItem">
          <button className="headerBtn">Search</button>
       </div>
+    </div></>}
     </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
 export default Header
