@@ -7,9 +7,11 @@
 }
 
 .pListItem{
+    flex: 1;
+    /* flex krne se sare images same size ke ho jaenge */
     border-radius: 10px;
     overflow: hidden;
-    cursor: pointer;
+    cursor: pointer; 
 }
  .pListImg{
     width: auto;
